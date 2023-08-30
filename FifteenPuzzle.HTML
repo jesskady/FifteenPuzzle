@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="FifteenPuzzle.css"/>
+    <script type="text/javascript" src="FifteenPuzzle.js"></script>
+    <!--<script type="text/javascript" src="code.jquery.com_jquery-3.7.0.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body onload="loadPuzzle()">
+    <!--<button onclick="loadPuzzle()" id="loadPuzzleButton">create tiles</button> 
+    <button onclick="scramble()" id="scrambleButton">scramble</button> -->
+    <button onclick="resetBoard()" id="resetButton:">reset</button>
+    <button onclick="debugGame()" id="debugButton:">debug</button>
+    <label for="rows">how many rows:</label>
+    <select id="rows">
+        <option value="3">3</option>
+        <option selected="selected" value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <label for="cols">how many cols:</label>
+    <select id="cols">
+        <option value="3">3</option>
+        <option selected="selected" value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <label for="colorScheme">color scheme:</label>
+    <select id="colorScheme">
+        <option value="Solid">Solid</option>
+        <option selected="selected" value="Rows">Rows</option>
+        <option value="Fringe">Fringe</option>
+    </select>
+    <div id="gameDiv">
+    </div>
+    
+    <p hidden="true" id="currentTileDivText">current tile:</p>
+    <p hidden="true" id="priorTileDivText">prior tile:</p>
+    <p id="moveCounter">moves: 0</p>
+    <p id="solvedMessage">solved: no</p>
+    <p id="timerDisplay">time:</p>
+</body>
